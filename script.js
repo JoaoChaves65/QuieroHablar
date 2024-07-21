@@ -32,8 +32,13 @@ cChat.orderBy('data', 'desc').onSnapshot(function (qs) {
     var i;
     for (i = 0; i < qs.docs.length; i++) {
         var c = qs.docs[i].data();
-
         lista.append(msg(c));
+    }
+
+    if (qs.docs.length > 0) {
+        document.querySelector('.mensagens').style.display = 'flex';
+    } else {
+        document.querySelector('.mensagens').style.display = 'none';
     }
 });
 
