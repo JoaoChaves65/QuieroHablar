@@ -31,7 +31,7 @@ header h1 {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    width: 30%;
+    width: 600px;
     height: 150px;
 }
 
@@ -57,10 +57,11 @@ header h1 {
 
 .mensagens {
     background-color: rgb(146, 218, 194);
-    width: 30%;
+    width: 600px;
     margin-bottom: 30px;
     padding: 20px;
     display: none;
+    font-size: 18px;
 }
 
 .mensagens ul {
@@ -76,4 +77,41 @@ header h1 {
     margin: 0;
     max-width: 100%; 
     word-break: break-word;
+}
+
+@media screen and (max-width: 750px) {
+    .botoes {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        width: 500px;
+        height: 150px;
+    }
+
+    .mensagens {
+        width: 500px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .botoes {
+        width: 400px;
+    }
+
+    .mensagens {
+        width: 400px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .botoes {
+        width: 300px;
+    }
+
+    .mensagens {
+        width: 300px;
+        font-size: 16px;
+    }
 }
